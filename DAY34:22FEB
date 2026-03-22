@@ -1,0 +1,23 @@
+## 22 February 2026
+
+### Topics Covered
+
+* Loops
+
+### Code Practiced
+
+```php id="php04"
+<?php
+for ($i = 1; $i <= 5; $i++) {
+    echo $i;
+}
+?>
+```
+
+### Learning Outcome
+
+* Repetitive tasks handle karna seekha
+
+### Next Plan
+
+* Forms handling
