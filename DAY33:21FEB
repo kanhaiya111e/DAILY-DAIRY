@@ -1,0 +1,27 @@
+## 21 February 2026
+
+### Topics Covered
+
+* Conditional Statements
+
+### Code Practiced
+
+```php id="php03"
+<?php
+$age = 18;
+
+if ($age >= 18) {
+    echo "Adult";
+} else {
+    echo "Minor";
+}
+?>
+```
+
+### Learning Outcome
+
+* Decision making logic samajh aaya
+
+### Next Plan
+
+* Loops
