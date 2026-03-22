@@ -1,0 +1,20 @@
+## 17 March 2026
+
+### Topics Covered
+
+* Create and Use Database
+
+### Code Practiced
+
+```sql id="m02"
+CREATE DATABASE school;
+USE school;
+```
+
+### Learning Outcome
+
+* Database create aur use karna aa gaya
+
+### Next Plan
+
+* Tables create karna
