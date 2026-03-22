@@ -1,0 +1,38 @@
+## 25 February 2026 (Weekend Mini Project)
+
+### Project: Simple Form with Database
+
+### Features
+
+* User input form
+* Data database mein store
+
+### Code
+
+```php id="php08"
+<?php
+$conn = mysqli_connect("localhost", "root", "", "test");
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST['name'];
+
+    $sql = "INSERT INTO users (name) VALUES ('$name')";
+    mysqli_query($conn, $sql);
+}
+?>
+
+<form method="POST">
+  <input type="text" name="name">
+  <button type="submit">Submit</button>
+</form>
+```
+
+### Learning Outcome
+
+* Frontend + Backend + Database connect kiya
+* Real application ka basic flow samajh aaya
+
+### Improvement Areas
+
+* Security (SQL injection prevention)
+* Validation add karna hai
