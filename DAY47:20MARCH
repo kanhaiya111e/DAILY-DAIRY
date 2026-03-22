@@ -1,0 +1,20 @@
+## 20 March 2026
+
+### Topics Covered
+
+* Select Data
+
+### Code Practiced
+
+```sql id="m05"
+SELECT * FROM students;
+SELECT name FROM students;
+```
+
+### Learning Outcome
+
+* Data fetch karna aa gaya
+
+### Next Plan
+
+* Update and Delete
