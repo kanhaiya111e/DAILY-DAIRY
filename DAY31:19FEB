@@ -1,0 +1,27 @@
+## 19 February 2026
+
+### Topics Covered
+
+* Introduction to PHP
+* Running PHP
+
+### Concepts Learned
+
+* PHP ek server-side scripting language hai
+* Browser ko HTML return karta hai
+
+### Code Practiced
+
+```php id="php01"
+<?php
+echo "Hello World";
+?>
+```
+
+### Learning Outcome
+
+* PHP ka basic syntax samajh aaya
+
+### Next Plan
+
+* Variables aur data types
