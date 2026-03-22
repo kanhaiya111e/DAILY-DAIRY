@@ -1,0 +1,23 @@
+## 18 March 2026
+
+### Topics Covered
+
+* Table Creation
+
+### Code Practiced
+
+```sql id="m03"
+CREATE TABLE students (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    age INT
+);
+```
+
+### Learning Outcome
+
+* Table structure banana aa gaya
+
+### Next Plan
+
+* Data insert karna
