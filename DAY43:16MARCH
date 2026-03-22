@@ -1,0 +1,26 @@
+## 16 March 2026
+
+### Topics Covered
+
+* Introduction to MySQL
+* Database basics
+
+### Concepts Learned
+
+* MySQL ek RDBMS hai
+* Data tables mein store hota hai
+* Rows aur columns ka concept
+
+### Commands Practiced
+
+```sql id="m01"
+SHOW DATABASES;
+```
+
+### Learning Outcome
+
+* MySQL ka basic idea clear hua
+
+### Next Plan
+
+* Database create karna
