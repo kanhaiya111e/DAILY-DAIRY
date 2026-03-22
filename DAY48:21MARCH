@@ -1,0 +1,24 @@
+## 21 March 2026
+
+### Topics Covered
+
+* Update and Delete
+
+### Code Practiced
+
+```sql id="m06"
+UPDATE students
+SET age = 22
+WHERE id = 1;
+
+DELETE FROM students
+WHERE id = 2;
+```
+
+### Learning Outcome
+
+* Data modify aur delete karna aa gaya
+
+### Improvement Areas
+
+* WHERE clause dhyaan se use karna
