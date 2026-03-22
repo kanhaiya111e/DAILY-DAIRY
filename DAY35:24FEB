@@ -1,0 +1,27 @@
+## 24 February 2026
+
+### Topics Covered
+
+* PHP + MySQL Connection
+
+### Code Practiced
+
+```php id="php07"
+<?php
+$conn = mysqli_connect("localhost", "root", "", "test");
+
+if (!$conn) {
+    die("Connection failed");
+}
+
+echo "Connected successfully";
+?>
+```
+
+### Learning Outcome
+
+* PHP se database connect karna aa gaya
+
+### Next Plan
+
+* Insert data into database
