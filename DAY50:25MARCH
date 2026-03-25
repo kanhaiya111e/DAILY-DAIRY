@@ -1,0 +1,31 @@
+
+---
+
+#  DAY 2 DIARY (File Name: `day2.md`)
+
+```markdown
+#  Day 2 – Modules & CLI Project
+
+##  Date:
+Day 2
+
+##  Objective:
+- Learn modules in Node.js
+- Understand require and exports
+- Build CLI Calculator
+
+---
+
+## Topics Covered:
+
+### 1. Modules
+Every file in Node.js is a module. Modules help in code reusability.
+
+---
+
+### 2. module.exports
+Used to export functions or data from a file.
+
+Example:
+```js
+module.exports = { add, sub };
