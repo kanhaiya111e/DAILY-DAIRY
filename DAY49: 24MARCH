@@ -1,0 +1,36 @@
+# 📘 Day 1 – Node.js Basics
+
+## 📅 Date:
+Day 1
+
+## 🎯 Objective:
+- Understand Node.js
+- Learn process object
+- Take command line input
+
+---
+
+## 📚 Topics Covered:
+
+### 1. Introduction to Node.js
+Node.js is a runtime environment that allows JavaScript to run outside the browser using the V8 engine.
+
+---
+
+### 2. Global Objects
+- __dirname → current directory path  
+- __filename → current file path  
+
+---
+
+### 3. Process Object
+- Used to interact with current Node.js process  
+- process.argv → used for command line input  
+
+---
+
+### 4. Command Line Input
+Example:
+```js
+const name = process.argv[2];
+console.log("Hello " + name);
