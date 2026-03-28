@@ -1,0 +1,161 @@
+Here is your **Day 3 diary** in clean, professional, GitHub-ready format without emojis. You can save this as `day3.md`.
+
+---
+
+# Day 3 – File System (fs Module) and CLI Application
+
+## Date
+
+Day 3
+
+---
+
+## Objective
+
+* Understand the File System (fs module) in Node.js
+* Learn asynchronous behavior in Node.js
+* Build a basic CLI-based file manager application
+
+---
+
+## Topics Covered
+
+### 1. File System Module (fs)
+
+The `fs` module is a built-in Node.js module used to interact with the file system. It allows reading, writing, updating, and deleting files.
+
+```js
+const fs = require("fs");
+```
+
+---
+
+### 2. File Operations
+
+#### Write File
+
+Creates a new file or overwrites an existing file.
+
+```js
+fs.writeFile("data.txt", "Hello", (err) => {});
+```
+
+---
+
+#### Read File
+
+Reads the content of a file.
+
+```js
+fs.readFile("data.txt", "utf-8", (err, data) => {});
+```
+
+---
+
+#### Append File
+
+Adds new content to an existing file.
+
+```js
+fs.appendFile("data.txt", "New Line", (err) => {});
+```
+
+---
+
+#### Delete File
+
+Deletes a file from the system.
+
+```js
+fs.unlink("data.txt", (err) => {});
+```
+
+---
+
+### 3. Asynchronous Behavior in Node.js
+
+Node.js file operations are asynchronous. This means execution does not wait for one task to complete before moving to the next.
+
+#### Incorrect Approach
+
+```js
+fs.writeFile(...);
+fs.readFile(...);
+```
+
+In this case, the read operation may execute before the write operation finishes.
+
+---
+
+#### Correct Approach (Callback Chaining)
+
+```js
+fs.writeFile("data.txt", "Hello", (err) => {
+    if (!err) {
+        fs.readFile("data.txt", "utf-8", (err, data) => {
+            console.log(data);
+        });
+    }
+});
+```
+
+This ensures that the file is read only after it has been successfully written.
+
+---
+
+## Mini Project: File Manager CLI Application
+
+### Features
+
+* Create a file
+* Read a file
+* Delete a file
+
+---
+
+### Example Commands
+
+```bash
+node app.js create file.txt "Hello"
+node app.js read file.txt
+node app.js delete file.txt
+```
+
+---
+
+### Core Logic
+
+* Command-line arguments handled using `process.argv`
+* Conditional logic used to determine the operation
+* File operations performed using the `fs` module
+
+---
+
+## Key Learnings
+
+* Node.js uses non-blocking, asynchronous execution
+* Proper sequencing is required when operations depend on each other
+* File handling is a fundamental backend skill
+* CLI tools can be built using Node.js
+
+---
+
+## Mistakes Faced
+
+* Executed write and read operations simultaneously
+* Did not understand asynchronous execution order
+* Missing proper error handling
+
+---
+
+## Improvements Made
+
+* Implemented callback chaining
+* Improved error handling using return statements
+* Gained clear understanding of async behavior
+
+---
+
+## Status
+
+Completed
