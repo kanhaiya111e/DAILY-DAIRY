@@ -1,0 +1,181 @@
+Got it — ab main tujhe **Day 4 (Event Loop + Callbacks)** ki diary clean format mein de raha hoon, bina day mention kiye.
+Isko tu GitHub pe `callbacks-event-loop.md` naam se upload kar sakta hai.
+
+---
+
+# Event Loop and Callbacks in Node.js
+
+## Objective
+
+* Understand callbacks in JavaScript
+* Learn asynchronous behavior in Node.js
+* Understand how the Event Loop works
+
+---
+
+## Topics Covered
+
+### 1. Callbacks
+
+A callback is a function passed as an argument to another function and executed after a specific task is completed.
+
+```js id="d5epxm"
+function greet(name, callback) {
+    console.log("Hello " + name);
+    callback();
+}
+
+function bye() {
+    console.log("Bye");
+}
+
+greet("Max", bye);
+```
+
+---
+
+### 2. Callback in Node.js
+
+Callbacks are commonly used in asynchronous operations such as file handling.
+
+```js id="sq9n57"
+const fs = require("fs");
+
+fs.readFile("data.txt", "utf-8", (err, data) => {
+    console.log(data);
+});
+```
+
+---
+
+### 3. Synchronous vs Asynchronous Execution
+
+#### Synchronous
+
+```js id="p63u3g"
+console.log("A");
+console.log("B");
+console.log("C");
+```
+
+Output: A B C
+
+---
+
+#### Asynchronous
+
+```js id="p93r1v"
+console.log("A");
+
+setTimeout(() => {
+    console.log("B");
+}, 0);
+
+console.log("C");
+```
+
+Output: A C B
+
+---
+
+### 4. Event Loop
+
+The Event Loop is responsible for handling asynchronous operations in Node.js.
+
+Execution Flow:
+
+1. Code runs in the Call Stack
+2. Async operations are handled by Web APIs
+3. Completed tasks move to the Callback Queue
+4. Event Loop pushes callbacks to the Call Stack when it is empty
+
+---
+
+### 5. Example of Event Loop
+
+```js id="y9fpzw"
+console.log("Start");
+
+setTimeout(() => {
+    console.log("Timeout");
+}, 0);
+
+console.log("End");
+```
+
+Output:
+Start
+End
+Timeout
+
+---
+
+### 6. Multiple Callbacks
+
+```js id="q3wrp9"
+console.log("A");
+
+setTimeout(() => {
+    console.log("B");
+}, 0);
+
+setTimeout(() => {
+    console.log("C");
+}, 0);
+
+console.log("D");
+```
+
+Output:
+A
+D
+B
+C
+
+---
+
+### 7. Callback Hell
+
+Nested callbacks make code difficult to read and maintain.
+
+```js id="b1a6az"
+fs.readFile("a.txt", () => {
+    fs.readFile("b.txt", () => {
+        fs.readFile("c.txt", () => {
+            console.log("Done");
+        });
+    });
+});
+```
+
+---
+
+## Key Learnings
+
+* Callbacks are essential for handling asynchronous tasks
+* Node.js executes code in a non-blocking manner
+* Event Loop manages execution order of async tasks
+* Even with zero delay, callbacks execute after synchronous code
+* Callback hell reduces code readability
+
+---
+
+## Mistakes Faced
+
+* Misunderstanding execution order
+* Expecting async code to run sequentially
+* Difficulty in understanding callback flow
+
+---
+
+## Improvements Made
+
+* Understood how asynchronous execution works
+* Learned Event Loop flow clearly
+* Improved ability to predict output of async code
+
+---
+
+## Status
+
+Completed
