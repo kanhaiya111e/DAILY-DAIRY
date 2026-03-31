@@ -1,0 +1,26 @@
+**Daily DSA Diary – Progress Log**
+
+Aaj maine DSA me strong foundation banane par focus kiya. Maine do core problems solve ki: **frequency count** aur **anagram**, aur inke through mujhe hashing aur object handling ka real understanding mila.
+
+Sabse pehle maine frequency count concept seekha. Maine samjha ki kisi string ya array me har element kitni baar aata hai, usko efficiently count karne ke liye hash map (object) use karte hain. Mujhe `(freq[x] || 0) + 1` pattern clearly samajh aaya, jo almost har hashing problem ka base hai.
+
+Uske baad maine anagram problem solve ki. Isme maine seekha ki do strings ko compare karne ke liye unki character frequency match honi chahiye. Maine frequency build karke aur second string se values reduce karke check kiya ki dono strings valid anagram hain ya nahi. Is process me mujhe early return logic aur edge cases (length mismatch, missing character) bhi samajh aaye.
+
+Phir maine object iteration seekha — kaise `for...in`, `Object.keys`, aur `Object.entries` ka use karke data access karte hain. Ye concept directly DSA aur backend dono me kaam aayega.
+
+Uske baad maine **most frequent character** problem solve ki, jisme maine frequency map bana kar maximum value track ki. Isse mujhe max tracking logic clear hua.
+
+Finally, maine **first non-repeating character** problem solve ki. Isme maine ek important concept samjha:
+**frequency + original traversal = order maintained result**
+Yahan maine O(n²) brute force aur O(n) optimized approach dono samjhe, aur optimization ka importance realize kiya.
+
+Aaj ka major takeaway:
+
+* Hashing DSA ka backbone hai
+* Frequency count multiple problems ka base hai
+* Optimization brute force se hashing ki taraf hota hai
+* Order maintain karna alag problem constraint hota hai
+
+Overall, aaj maine DSA ke core building blocks pe kaam kiya jo aage sliding window, string problems, aur real interview questions me directly use honge.
+
+Next target: Sliding Window technique start karna aur frequency ko dynamic banana.
