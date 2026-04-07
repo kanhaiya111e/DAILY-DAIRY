@@ -1,0 +1,268 @@
+Below is a clean, structured, professional note on **MongoDB CRUD Operations** with syntax, examples, and practice questions. This is designed for revision + interview clarity.
+
+---
+
+# MongoDB CRUD Notes
+
+## 1. CREATE (Insert Data)
+
+### Purpose
+
+Insert new documents into a collection.
+
+### Methods
+
+#### insertOne()
+
+```js
+db.users.insertOne({
+  name: "Max",
+  age: 21,
+  city: "Delhi"
+})
+```
+
+#### insertMany()
+
+```js
+db.users.insertMany([
+  { name: "Aman", age: 25 },
+  { name: "Riya", age: 20 }
+])
+```
+
+### Key Points
+
+* Collection auto-create ho jati hai
+* `_id` automatically generate hota hai
+* JSON-like structure (BSON internally)
+
+---
+
+## 2. READ (Fetch Data)
+
+### Purpose
+
+Database se data retrieve karna
+
+### Methods
+
+#### find()
+
+```js
+db.users.find()
+```
+
+#### find with condition
+
+```js
+db.users.find({ name: "Max" })
+```
+
+#### Multiple conditions (AND)
+
+```js
+db.users.find({ name: "Max", age: 21 })
+```
+
+#### OR condition
+
+```js
+db.users.find({
+  $or: [
+    { name: "Max" },
+    { age: 25 }
+  ]
+})
+```
+
+#### Comparison operators
+
+```js
+db.users.find({ age: { $gt: 20 } })   // greater than
+db.users.find({ age: { $lt: 25 } })   // less than
+db.users.find({ age: { $gte: 21 } })  // greater than equal
+db.users.find({ age: { $lte: 21 } })  // less than equal
+```
+
+#### Select specific fields
+
+```js
+db.users.find(
+  { age: { $gt: 18 } },
+  { name: 1, _id: 0 }
+)
+```
+
+#### Count documents
+
+```js
+db.users.countDocuments({ age: { $gt: 18 } })
+```
+
+---
+
+## 3. UPDATE (Modify Data)
+
+### Purpose
+
+Existing document ko update karna
+
+### Methods
+
+#### updateOne()
+
+```js
+db.users.updateOne(
+  { name: "Max" },
+  { $set: { age: 22 } }
+)
+```
+
+#### updateMany()
+
+```js
+db.users.updateMany(
+  { age: { $gt: 20 } },
+  { $set: { status: "active" } }
+)
+```
+
+### Operators
+
+#### $set (add/update field)
+
+```js
+{ $set: { city: "Mumbai" } }
+```
+
+#### $inc (increment value)
+
+```js
+{ $inc: { age: 1 } }
+```
+
+#### $unset (remove field)
+
+```js
+{ $unset: { city: "" } }
+```
+
+#### $push (add to array)
+
+```js
+{ $push: { skills: "NodeJS" } }
+```
+
+### Important Note
+
+Always use `$set`. Without it, document overwrite ho sakta hai.
+
+---
+
+## 4. DELETE (Remove Data)
+
+### Purpose
+
+Documents delete karna
+
+### Methods
+
+#### deleteOne()
+
+```js
+db.users.deleteOne({ name: "Max" })
+```
+
+#### deleteMany()
+
+```js
+db.users.deleteMany({ age: { $lt: 18 } })
+```
+
+#### Delete all documents
+
+```js
+db.users.deleteMany({})
+```
+
+#### Drop collection
+
+```js
+db.users.drop()
+```
+
+---
+
+# Summary Table
+
+| Operation | Method                |
+| --------- | --------------------- |
+| Create    | insertOne, insertMany |
+| Read      | find                  |
+| Update    | updateOne, updateMany |
+| Delete    | deleteOne, deleteMany |
+
+---
+
+# Practice Questions
+
+## Level 1 (Basic)
+
+1. Insert 3 users with different fields
+2. Find all users
+3. Find user with name "Aman"
+4. Find users with age greater than 20
+5. Display only name field
+
+---
+
+## Level 2 (Intermediate)
+
+6. Insert 5 users with fields: name, age, city
+7. Find users where city = "Delhi"
+8. Find users where age < 25 OR city = "Mumbai"
+9. Count users with age > 18
+10. Add new field "status: active" to all users
+
+---
+
+## Level 3 (Advanced)
+
+11. Increase age by 2 for user "Max"
+12. Add skill "MongoDB" to a user's skills array
+13. Remove field "city" from a user
+14. Delete users with age less than 18
+15. Update multiple users where city = "Delhi" and set status = "verified"
+
+---
+
+# Interview-Oriented Questions
+
+1. Difference between insertOne and insertMany
+2. Difference between updateOne and updateMany
+3. Why do we use $set in MongoDB
+4. Difference between deleteOne and drop
+5. How MongoDB handles schema
+
+---
+
+# Final Understanding
+
+If you can:
+
+* Insert structured data
+* Query with conditions
+* Update using operators
+* Delete safely
+
+Then you are functionally ready to use MongoDB in backend systems.
+
+---
+
+Agar tum chaho next step me:
+
+* Real project-based CRUD (Node.js + MongoDB)
+* ya aggregation start kar sakte hain
+
+Bol dena.
