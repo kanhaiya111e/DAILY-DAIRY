@@ -1,0 +1,289 @@
+TODAY I PRACTICE BASIC OF JS : WHERE I LEARN CONDITIONAL STATEMENT , LOOP STATEMENT , ARRAY AND ITS METHODS;Theek. Main tumhe ek **structured, progressive practice set** de raha hoon jisme:
+
+* if-else
+* switch
+* ternary
+* loops
+* arrays
+
+sab cover hoga — aur gradually level badhega.
+Agar tum ye solve kar lete ho, toh basics strong ho jayenge.
+
+---
+
+# 🔹 LEVEL 1: If-Else (logic build)
+
+## Q1
+
+👉 Number even hai ya odd check karo
+
+---
+
+## Q2
+
+👉 Number positive, negative ya zero
+
+---
+
+## Q3
+
+👉 3 numbers me se largest find karo
+
+---
+
+## Q4
+
+👉 Age check:
+
+* <18 → minor
+* 18–60 → adult
+* > 60 → senior
+
+---
+
+## Q5 (important)
+
+👉 Leap year check karo
+
+---
+
+# 🔹 LEVEL 2: Ternary Operator
+
+## Q6
+
+👉 Even/odd ternary se
+
+---
+
+## Q7
+
+👉 Max of two numbers using ternary
+
+---
+
+## Q8
+
+👉 Check:
+
+* marks >= 40 → pass
+* else fail
+
+---
+
+# 🔹 LEVEL 3: Switch (real use)
+
+## Q9
+
+👉 Day number → day name
+
+```js
+1 → Monday  
+2 → Tuesday  
+...
+```
+
+---
+
+## Q10
+
+👉 Calculator:
+
+* +, -, *, /
+
+---
+
+## Q11
+
+👉 Grade system:
+
+```
+A → Excellent  
+B → Good  
+C → Average  
+D → Poor  
+```
+
+---
+
+# 🔹 LEVEL 4: Loops (very important)
+
+## Q12
+
+👉 1 to 10 print karo (for loop)
+
+---
+
+## Q13
+
+👉 1 to 10 ka sum
+
+---
+
+## Q14
+
+👉 Table print karo (user input number)
+
+---
+
+## Q15
+
+👉 Reverse number print karo
+
+Example: `1234 → 4321`
+
+---
+
+## Q16 (important)
+
+👉 Count digits in number
+
+---
+
+## Q17
+
+👉 Factorial find karo
+
+---
+
+# 🔹 LEVEL 5: Arrays Basics
+
+## Q18
+
+```js
+const arr = [10, 20, 30];
+```
+
+👉 Sum find karo (loop se)
+
+---
+
+## Q19
+
+👉 Array me max number find karo (loop se)
+
+---
+
+## Q20
+
+👉 Array reverse karo (loop use karke)
+
+---
+
+# 🔹 LEVEL 6: Arrays + Methods
+
+## Q21
+
+```js
+const nums = [1, 2, 3, 4];
+```
+
+👉 Double using map
+
+---
+
+## Q22
+
+👉 Even numbers filter karo
+
+---
+
+## Q23
+
+👉 Sum using reduce
+
+---
+
+## Q24
+
+👉 First number > 10 find karo
+
+---
+
+# 🔹 LEVEL 7: Mixed (interview level)
+
+## Q25
+
+```js
+const nums = [1, 2, 3, 4, 5];
+```
+
+👉 Even lo → square karo → sum nikaalo
+
+---
+
+## Q26
+
+```js
+const users = [
+  { name: "Max", age: 20 },
+  { name: "Sam", age: 30 }
+];
+```
+
+👉 Names uppercase
+
+---
+
+## Q27
+
+👉 Age > 25 filter karo
+
+---
+
+## Q28 (important)
+
+👉 Total age find karo (reduce)
+
+---
+
+# 🔥 FINAL CHALLENGE
+
+## Q29
+
+👉 Input:
+
+```js
+[1, 2, 2, 3, 3, 3]
+```
+
+👉 Output:
+
+```js
+{1:1, 2:2, 3:3}
+```
+
+---
+
+## Q30 (ultimate)
+
+👉 Input:
+
+```js
+["apple", "banana", "apple"]
+```
+
+👉 Output:
+
+```js
+{ apple: 2, banana: 1 }
+```
+
+---
+
+# 🚨 Instructions (follow strictly)
+
+1. Ek baar me sab mat karo
+2. Daily 5–7 questions
+3. Pehle khud try karo
+4. Fir mujhe bhejo
+
+---
+
+# Next Step
+
+Start karo **Q1–Q5 (if-else)** se
+Aur jab solve ho jaye:
+
+👉 bhejo — main check + improve + optimize karunga
+
+Ye practice tumhe **React + Node ke liye base strong karegi**.
