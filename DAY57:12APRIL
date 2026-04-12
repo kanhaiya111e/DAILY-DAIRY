@@ -1,0 +1,154 @@
+TODAY I LEARN HOW TO READ WRITE DELETE APPEND FILE FOLDER ASYNC AND SYNC WAY, AND THEN PROMISES AND THEIR METHOD , THEN DO TESE QUESTION:
+ठीक है। मैं तुम्हें **basic → intermediate → strong level** तक structured practice दे रहा हूँ। अगर तुम ये कर लिए, तो Promise + async concept काफी solid हो जाएगा।
+
+---
+
+# 🔹 Level 1 (Basic – Concept Clear)
+
+### Q1. Simple Promise
+
+एक promise बनाओ:
+
+* 2 second बाद `"Data mil gaya"` resolve करे
+
+---
+
+### Q2. Condition Based
+
+* number = 15
+* अगर > 10 → resolve `"Greater"`
+* वरना → reject `"Smaller"`
+
+---
+
+### Q3. Even/Odd
+
+* number = 7
+* even → resolve
+* odd → reject
+
+---
+
+# 🔹 Level 2 (Important – Real Understanding)
+
+### Q4. Chaining
+
+* पहला promise → `"Step 1"`
+* दूसरा `.then()` → `"Step 2"`
+* तीसरा `.then()` → `"Step 3"`
+
+👉 output sequence दिखाओ
+
+---
+
+### Q5. Error Handling
+
+* promise बनाओ जो हमेशा reject करे
+* `.catch()` में message print करो
+
+---
+
+### Q6. Delay Function (Important)
+
+एक function बनाओ:
+
+```js
+delay(ms)
+```
+
+* दिए गए ms के बाद resolve करे
+  👉 Example: `delay(2000)`
+
+---
+
+# 🔹 Level 3 (Node.js + Real Use)
+
+### Q7. File Read (must do)
+
+* `name.txt` file read करो
+* `.then/.catch` use करो
+
+---
+
+### Q8. File Write + Read
+
+* `data.txt` में `"Hello bhai"` लिखो
+* फिर उसी file को read करके print करो
+
+---
+
+### Q9. Multiple Promises (Important concept)
+
+2 promises बनाओ:
+
+* P1 → 1 sec बाद resolve
+* P2 → 2 sec बाद resolve
+
+👉 दोनों complete होने के बाद result print करो
+
+(Hint: `Promise.all()`)
+
+---
+
+# 🔹 Level 4 (Interview Level)
+
+### Q10. Custom API Simulation
+
+Function बनाओ:
+
+```js
+getUserData()
+```
+
+* 2 sec बाद:
+
+  * 50% chance → resolve `"User data"`
+  * 50% chance → reject `"Error fetching user"`
+
+---
+
+### Q11. Promise Chain Logic
+
+* Step 1 → number = 5
+* Step 2 → multiply by 2
+* Step 3 → subtract 3
+
+👉 final result print करो using chaining
+
+---
+
+### Q12. fs + Promise Logic (Strong)
+
+* file create करो → `user.txt`
+* उसमें `"Max"` लिखो
+* फिर read करो
+* फिर console में print करो
+
+---
+
+# 🔥 Rule (important)
+
+हर question में:
+
+* `.then()` properly use करो
+* `.catch()` जरूर लगाओ
+
+---
+
+# 🎯 Tumhara Target
+
+* पहले Level 1 + 2 करो (आज)
+* फिर Level 3 (कल)
+* फिर Level 4 (final polish)
+
+---
+
+अगर तुम serious हो:
+👉 अपने solutions भेजो
+मैं तुम्हें:
+
+* optimize करके दूंगा
+* interview level explanation दूंगा
+* mistakes fix करूँगा (deep level)
+
+बस शुरू करो Q1 से।
