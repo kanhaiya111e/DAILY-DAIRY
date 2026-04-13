@@ -1,0 +1,267 @@
+ठीक है. अब तुम्हें **rules याद नहीं करने**, बल्कि **engine कैसे सोचता है** वो समझना है. मैं इसे structured तरीके से दे रहा हूँ — यही तुम्हारा reference रहेगा.
+
+---
+
+# 1. Type Coercion क्या है (1 लाइन)
+
+> जब JavaScript automatically एक type को दूसरे type में convert करता है during operations
+
+---
+
+# 2. सबसे पहले Golden Mental Model
+
+जब भी expression देखो, ये 3 चीज़ सोचो:
+
+1. कौन सा **operator** है?
+2. कौन से **types** involved हैं?
+3. क्या **conversion** होगा?
+
+---
+
+# 3. Operator-based Rules (सबसे important)
+
+## Rule 1: `+` operator (special case)
+
+👉 अगर किसी एक side string है → **concatenation होगा**
+
+```js
+"5" + 2 → "52"
+"hello" + true → "hellotrue"
+```
+
+👉 अगर दोनों number हैं → addition
+
+```js
+2 + 3 → 5
+```
+
+---
+
+## Rule 2: `- * / %` operators
+
+👉 ये हमेशा number में convert करते हैं
+
+```js
+"5" - 2 → 3
+"10" * "2" → 20
+"6" / "3" → 2
+```
+
+---
+
+## Rule 3: Boolean conversion
+
+| Value | Number में |
+| ----- | ---------- |
+| true  | 1          |
+| false | 0          |
+
+```js
+true + 1 → 2
+false + 5 → 5
+```
+
+---
+
+# 4. Truthy / Falsy Rules
+
+## Falsy values (IMPORTANT — ये 100% याद रखो)
+
+* false
+* 0
+* "" (empty string)
+* null
+* undefined
+* NaN
+
+👉 बाकी सब truthy है
+
+```js
+if ("0") → run होगा
+if ([]) → run होगा
+if ({}) → run होगा
+```
+
+---
+
+# 5. `==` vs `===` (core interview topic)
+
+## `==` (loose equality)
+
+👉 type convert करता है
+
+```js
+"5" == 5 → true
+false == 0 → true
+null == undefined → true
+```
+
+---
+
+## `===` (strict equality)
+
+👉 type conversion नहीं करता
+
+```js
+"5" === 5 → false
+false === 0 → false
+```
+
+---
+
+# 6. Special Conversion Rules (danger zone)
+
+## Rule 1: Array conversion
+
+```js
+[] → ""  
+[1,2] → "1,2"
+```
+
+---
+
+## Rule 2: Object conversion
+
+```js
+{} → "[object Object]"
+```
+
+---
+
+## Rule 3: Empty array weird cases
+
+```js
+[] == false → true
+```
+
+👉 breakdown:
+
+* [] → ""
+* "" → 0
+* false → 0
+* 0 == 0 → true
+
+---
+
+## Rule 4: null & undefined
+
+```js
+null == undefined → true
+```
+
+लेकिन:
+
+```js
+null == 0 → false
+```
+
+---
+
+# 7. Operator Precedence (तुमसे गलती यहीं हो रही थी)
+
+## Order:
+
+1. `()`
+2. `* /`
+3. `+ -`
+
+---
+
+## Example:
+
+```js
+"5" + 2 * 3
+```
+
+Step:
+
+* 2 * 3 → 6
+* "5" + 6 → "56"
+
+---
+
+# 8. Important Internal Rule (advanced)
+
+जब object/array use होता है:
+
+👉 पहले **primitive में convert होता है**
+
+* via `toString()` or `valueOf()`
+
+---
+
+# 9. Common Pitfalls (interview traps)
+
+```js
+[] + [] → ""
+[] + {} → "[object Object]"
+{} + [] → 0 (console case)
+```
+
+---
+
+# 10. Real-world advice (very important)
+
+👉 Production में:
+
+* हमेशा `===` use करो
+* `==` avoid करो
+
+---
+
+# 11. Quick Summary (revision)
+
+* `+` → string मिला → concat
+* `- * /` → number conversion
+* true → 1, false → 0
+* `==` → convert करेगा
+* `===` → strict
+* [] → ""
+* {} → "[object Object]"
+
+---
+
+# अब practice (mandatory)
+
+इनको solve करो (step-by-step):
+
+---
+
+## Question A
+
+```js
+"20" - "10" + "5"
+```
+
+---
+
+## Question B
+
+```js
+true + "10" - false
+```
+
+---
+
+## Question C (interview)
+
+```js
+[1,2] + [3,4]
+```
+
+---
+
+## Question D (danger)
+
+```js
+[] == 0
+```
+
+---
+
+अगर ये तुमने सही कर दिए →
+तुम Type Coercion में strong हो जाओगे.
+
+उसके बाद:
+
+## Execution Context (JS engine अंदर कैसे चलता है) शुरू करेंगे — ये सबसे powerful topic है.
